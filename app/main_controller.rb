@@ -8,16 +8,16 @@ class MainController < NSWindowController
   def generate_login_url end_point
     case end_point
     when "prod"
-      @end_point = "https://login.salesforce.com?retURL=/one/one.app"
+      @end_point = "https://login.salesforce.com/?startURL=%2Fone%2Fone.app"
       @window_title = "Production Org"
     when "sandbox" 
-      @end_point = "https://test.salesforce.com?retURL=/one/one.app"
+      @end_point = "https://test.salesforce.com/?startURL=%2Fone%2Fone.app"
       @window_title = "Sandbox Org"
     when "pre"
-      @end_point = "https://gs0.salesforce.com?retURL=/one/one.app"
+      @end_point = "https://gs0.salesforce.com/?startURL=%2Fone%2Fone.app"
       @window_title = "Pre-Release Org"
     else
-      @end_point = "https://login.salesforce.com?retURL=/one/one.app"
+      @end_point = "https://login.salesforce.com/?startURL=%2Fone%2Fone.app"
       @window_title = "Production Org"
     end
   end
